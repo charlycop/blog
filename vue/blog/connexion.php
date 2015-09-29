@@ -2,7 +2,7 @@
     <head>
         <title>Mon blog - Se connecter</title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../../vue/blog/style.css" />
+        <link rel="stylesheet" href="vue/blog/style.css" />
     </head>
         
     <body>
@@ -10,19 +10,13 @@
 
     <div class="inscription">
 
-<!-- Affichage d'un message d'erreur ou redirection vers la page membre  -->
+<!-- Affichage d'un message -->
     <?php
-
-        if (!isset($resultat))
-        {
-            echo 'Mauvais identifiant ou mot de passe !';
-        }
+        if (!isset($_GET['statut'])) 
+        {}
         else
         {
-            session_start();
-            $_SESSION['id'] = $resultat['id_membre'];
-            $_SESSION['pseudo'] = htmlspecialchars($_POST['pseudo']);
-            echo 'Bonjour ' . $_SESSION['pseudo'] . ', tu es connecté !';
+            echo '<p class="sub_error">Le mot de passe et le pseudonyme ne correspondent pas, veuillez recommencer</p>';
         }
     ?>
 

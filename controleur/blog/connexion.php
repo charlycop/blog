@@ -1,29 +1,22 @@
 <?php
 include_once('../../modele/blog/connexion_sql.php');
 
-// Hachage du mot de passe
+// Sécurisation des données
 $pass_hache = sha1($_POST['mdp']);
+$pseudo = htmlspecialchars($_POST['pseudo']);
 
-// Vérification des identifiants
-$req = $bdd->prepare('SELECT id_membre FROM membres WHERE pseudo = :pseudo AND pass = :pass');
-$req->execute(array(
-    'pseudo' => htmlspecialchars($_POST['pseudo']),
-    'pass' => $pass_hache));
+// Vérification de la concordance pseudo/mot de passe
+include_once ('../../modele/blog/post_connexion.php');
+$connexion = post_connexion($pseudo,$pass_hache);
 
-$resultat = $req->fetch();
-# return $resultat;
+// On renvoie sur le formulaire ou la page membre
+if (!$resultat)
 
-include_once('../../connexion.php');
-
-
-/*if (!$resultat)
 {
-    echo 'Mauvais identifiant ou mot de passe !';
+	header('Location: ../../connexion.php?statut=NOK');
 }
+
 else
 {
-    session_start();
-    $_SESSION['id'] = $resultat['id_membre'];
-    $_SESSION['pseudo'] = htmlspecialchars($_POST['pseudo']);
-    echo 'Vous êtes connecté !';
-}*/
+	header('Location: ../../membre.php');
+}

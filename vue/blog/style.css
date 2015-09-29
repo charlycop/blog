@@ -1,0 +1,78 @@
+body
+{
+    font-family: sans-serif;
+    background-color: #CCFFFF;
+}
+
+h1, h3, h2
+{
+    text-align:center;
+}
+
+h3
+{
+    background-color:black;
+    color:white;
+    font-size:0.9em;
+    margin-bottom:0px;
+}
+
+h3 span
+{
+    background-color:black;
+    color:white;
+    font-size:0.8em;
+    margin-bottom:0px;
+    font-weight: normal;
+}
+
+.news p
+{
+    background-color:#CCCCCC;
+    margin-top:0px;
+    color: black;
+}
+.news
+{
+    width:70%;
+    margin:auto;
+}
+
+a
+{
+    text-decoration: none;
+    color: blue;
+    font-size: small;
+}
+
+.inscription, .inscription table
+{
+    background-color: #99CCFF;
+    margin: auto;
+    width: 208px;
+    border-radius: 5px;
+}
+
+.inscription
+{
+    padding: 2px 24px 28px 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    text-align:center;
+}
+
+.bouton
+{
+    text-align: center;
+}
+
+td
+{
+    width:50%;
+}
+
+.sub_error
+{
+    font-size: 0.8em;
+    color: red;
+}

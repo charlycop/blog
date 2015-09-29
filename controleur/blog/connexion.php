@@ -18,5 +18,12 @@ if (!$connexion)
 
 else
 {
+	// On démarre la session
+	session_start();
+    $_SESSION['id'] = $connexion['id_membre'];
+    $_SESSION['pseudo'] = htmlspecialchars($_POST['pseudo']);
+    echo 'Vous êtes connecté !';
+
+    // On redirige sur la page membre
 	header('Location: ../../membre.php');
 }

@@ -12,6 +12,5 @@ function get_commentaires($offset, $limit)
     $req->execute();
     $commentaires = $req->fetchAll();
     
-    
     return $commentaires;
 }

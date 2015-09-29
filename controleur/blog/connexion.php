@@ -10,7 +10,7 @@ include_once ('../../modele/blog/post_connexion.php');
 $connexion = post_connexion($pseudo,$pass_hache);
 
 // On renvoie sur le formulaire ou la page membre
-if (!$resultat)
+if (!$connexion)
 
 {
 	header('Location: ../../connexion.php?statut=NOK');

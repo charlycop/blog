@@ -9,6 +9,7 @@
 			'pass' => $mdp_hache_membre
 		));
 		$resultat = $req->fetchAll();
-       return $resultat;
+
+        return $resultat;
     }
 }

@@ -6,12 +6,11 @@
     </head>
         
     <body>
-        <div class="header_master">
-            <div id="header"><a href="membre.php">Espace membre</a></div>
-        </div>
+<?php
+    include ('vue/blog/header.php');
+?>
         
-
-      <h1 id="titre">Mon super blog !</h1>
+<h1 id="titre">Mon super blog !</h1>
         
  
 <?php

@@ -6,9 +6,17 @@
     </head>
         
     <body>
-<?php $billet_id = (int) $_GET['billet'] ?>       
+<?php
+    
+?>
 
-        <h2>Billet concerné</h2>
+<?php 
+    include ('vue/blog/header.php');
+
+    $billet_id = (int) $_GET['billet'] 
+?>       
+
+        <h2 id="titre">Billet concerné</h2>
  
 <!-- On affiche LE billet -->
 

@@ -76,3 +76,9 @@ td
     font-size: 0.8em;
     color: red;
 }
+
+#normal
+{
+    text-align: left;
+    background-color: #CCFFFF;
+}

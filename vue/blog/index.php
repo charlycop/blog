@@ -7,13 +7,14 @@
         
     <body>
         <h1>Mon super blog !</h1>
-        <p>Derniers billets du blog :</p>
+        
  
 <?php
 foreach($billets as $billet)
 {
 ?>
 <div class="news">
+    <p id="normal">Derniers billets du blog :</p>
     <h3>
         <?php echo $billet['titre']; ?>
         <em> - <span>le <?php echo $billet['date_creation_fr']; ?></span></em>

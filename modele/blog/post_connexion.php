@@ -8,7 +8,7 @@
 			'pseudo' => $pseudo_membre,
 			'pass' => $mdp_hache_membre
 		));
-		$resultat = $req->fetchAll();
+		$resultat = $req->fetch();
 
         return $resultat;
     }

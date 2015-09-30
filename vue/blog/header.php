@@ -11,7 +11,7 @@
     	else
     	{
     		{ ?>
-    		<a href="connexion.php">Connectez-vous</a>
+    		<a href="connexion.php">Connectez-vous</a> ou <a href="inscription.php">Inscrivez-vous</a>
     		<?php  	} 
     	}
     	?>

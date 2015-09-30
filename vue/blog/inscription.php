@@ -28,7 +28,8 @@
                     }
                     else
                     {
-                        header('Location: membre.php');
+                        // On redirige sur l'accueil
+                        header('Location: index.php');
                     }
                 }
         }

@@ -24,6 +24,6 @@ else
     $_SESSION['pseudo'] = htmlspecialchars($_POST['pseudo']);
     echo 'Vous êtes connecté !';
 
-    // On redirige sur la page membre
-	header('Location: ../../membre.php');
+    // On redirige sur l'accueil'
+	header('Location: ../../index.php');
 }

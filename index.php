@@ -1,4 +1,5 @@
 <?php
+session_start(); // On démarre la session AVANT toute chose
 
 include_once('modele/blog/connexion_sql.php');
 

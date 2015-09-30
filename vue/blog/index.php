@@ -6,7 +6,12 @@
     </head>
         
     <body>
-        <h1>Mon super blog !</h1>
+        <div class="header_master">
+            <div id="header"><a href="membre.php">Espace membre</a></div>
+        </div>
+        
+
+      <h1 id="titre">Mon super blog !</h1>
         
  
 <?php

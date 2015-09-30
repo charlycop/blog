@@ -32,7 +32,7 @@ h3 span
     margin-top:0px;
     color: black;
 }
-.news
+.news, #header
 {
     width:70%;
     margin:auto;
@@ -81,4 +81,25 @@ td
 {
     text-align: left;
     background-color: #CCFFFF;
+}
+
+.header_master
+{
+    background-color: grey;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 30px;
+    padding-top: 10px;
+}
+
+.header_master a
+{
+    color: white;
+}
+
+#titre
+{
+    padding-top: 20px;
 }

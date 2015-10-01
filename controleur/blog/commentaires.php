@@ -23,7 +23,7 @@ $commentaires = get_commentaires(0, 100);
 // Ici, on doit surtout sécuriser l'affichage
 foreach($commentaires as $cle => $commentaire)
 {
-    $commentaires[$cle]['auteur'] = htmlspecialchars($commentaire['auteur']);
+    $commentaires[$cle]['id_membre'] = htmlspecialchars($commentaire['id_membre']);
     $commentaires[$cle]['commentaire'] = nl2br(htmlspecialchars($commentaire['commentaire']));
 }
 

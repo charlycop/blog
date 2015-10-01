@@ -21,13 +21,20 @@
 <!-- On affiche LE billet -->
 
 <?php
+include ('modele/blog/get_pseudo.php');
 foreach($billets as $billet)
 {
 ?>
 <div class="news">
     <h3>
         <?php echo $billet['titre']; ?>
-        <em> - <span>le <?php echo $billet['date_creation_fr']; ?></span></em>
+        <em> - <span>le <?php echo $billet['date_creation_fr']; ?> de 
+        <?php 
+            // j'appelle la fonction pour afficher le pseudo
+            $pseudo_membre = get_pseudo($billet['id_membre']);
+            echo $pseudo_membre['pseudo'];
+        ?>
+    </span></em>
     </h3>
     
     <p>
@@ -40,18 +47,24 @@ foreach($billets as $billet)
 }
 ?>
 
-    <h2>Les <?php echo $nb_commentaire['nb_commentaires'] ?> commentaires du billet n°<?php echo $billet_id ?></h2>
+    <h2>Nombre de commentaire(s) : <?php echo $nb_commentaire['nb_commentaires'] ?></h2>
 
 <!-- On affiche les commentaires -->
 
 <?php
+
 foreach($commentaires as $commentaire)
 {
 ?>
 
 <div class="news">
     <h3>
-        <?php echo $commentaire['auteur']; ?>
+        <?php 
+            // j'appelle la fonction pour afficher le pseudo
+            $pseudo_membre = get_pseudo($commentaire['id_membre']);
+            echo $pseudo_membre['pseudo'];
+        ?>
+           
         <em>- <span>le <?php echo $commentaire['date_commentaire_fr']; ?></span></em>
     </h3>
     
@@ -65,5 +78,16 @@ foreach($commentaires as $commentaire)
 <?php
 }
 ?>
+
+<!-- On affiche le formulaire pour ajouter un commentaire -->  
+    <div class="nouveau_billet">
+        <h2 class="titre_inscription">Nouveau commentaire</h2>
+        <form action="controleur/blog/ecrire_commentaire.php" method="POST">  
+            <p><textarea id="contenu_commentaire" name="contenu_commentaire" required placeholder="Connectez-vous puis écrivez votre commentaire ici" cols="101" rows="10"></textarea></p>
+            <input type="hidden" id="id_billet" name="id_billet" value="<?php echo $billet_id; ?>" />
+            <div class="bouton"><input type="submit" value="Publier le commentaire"/></div>
+        </form>
+    </div>
+
 </body>
 </html>

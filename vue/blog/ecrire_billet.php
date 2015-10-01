@@ -11,35 +11,9 @@
 ?>
         
 <h1 id="titre">Mon super blog ! - Rédiger un billet</h1>
-        
+
+<!-- Formulaire -->   
     <div class="nouveau_billet">
-
-<!-- Affichage d'un message d'erreur ou redirection vers la page membre 
-    <?php
-        if (!isset($_GET['statut'])) 
-        {}
-        else
-        {
-            if ($_GET['statut'] == "mdpdifferents") 
-            {
-                echo '<p class="sub_error">Le pseudonyme que vous avez choisi est disponible, mais les deux mots de passe ne sont pas identique, veuillez recommencer</p>';
-            }
-            else
-                {
-                    if ($_GET['statut'] == "pseudoexiste")
-                    {
-                        echo '<p class="sub_error">Le pseudonyme que vous avez choisi n\'est plus disponible, veuillez en choisir un autre</p>';
-                    }
-                    else
-                    {
-                        // On redirige sur l'accueil
-                        header('Location: index.php');
-                    }
-                }
-        }
-    ?> -->
-
-<!-- Formulaire -->
         <h2 class="titre_inscription">Nouveau Billet de <?php echo $_SESSION['pseudo'] ?></h2>
         <form action="controleur/blog/ecrire_billet.php" method="POST">  
             <p><input id="titre_billet" name="titre_billet" type="text" size="100" maxlength="100" placeholder="Titre du billet" required /></p>

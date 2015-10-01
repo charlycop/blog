@@ -92,6 +92,7 @@ td
     left: 0;
     height: 30px;
     padding-top: 10px;
+
 }
 
 .header_master a
@@ -102,4 +103,17 @@ td
 #titre
 {
     padding-top: 20px;
+}
+
+#header_left, #header_right
+{
+    display: inline-block;
+    position: relative;
+    width:49%;
+    right: 0px;
+}
+
+#header_right
+{
+    text-align: right;
 }

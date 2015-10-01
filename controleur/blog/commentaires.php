@@ -11,9 +11,13 @@ foreach($billets as $cle => $billet)
     $billets[$cle]['contenu'] = nl2br(htmlspecialchars($billet['contenu']));
 }
 
-// On demande les 5 derniers commentaires
+// On compte le nombre de commentaires
+include_once('modele/blog/compte_commentaires.php');
+$nb_commentaire = compte_commentaires($_GET['billet']);
+
+// On demande les 100 derniers commentaires
 include_once('modele/blog/get_commentaires.php');
-$commentaires = get_commentaires(0, 5);
+$commentaires = get_commentaires(0, 100);
 
 // On effectue du traitement sur les données (contrôleur)
 // Ici, on doit surtout sécuriser l'affichage

@@ -27,7 +27,7 @@ foreach($billets as $billet)
     <p>
     <?php echo $billet['contenu']; ?>
     <br />
-    <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>
+    <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires (8)</a>
     </p>
 </div>
 <?php

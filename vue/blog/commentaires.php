@@ -40,7 +40,7 @@ foreach($billets as $billet)
 }
 ?>
 
-        <h2>Commentaires du billet n°<?php echo $billet_id ?></h2>
+    <h2>Les <?php echo $nb_commentaire['nb_commentaires'] ?> commentaires du billet n°<?php echo $billet_id ?></h2>
 
 <!-- On affiche les commentaires -->
 

@@ -21,7 +21,11 @@ if ($nb_pseudo_base['nb_pseudo'] == 0)
 		//Tout est OK, on enregistre dans la base
 		include_once('../../modele/blog/post_newmembre.php');
 		$post_newmembre = post_newmembre($pseudo_checked, $mdp_hache, $email_checked);
-		header('Location: ../../inscription.php?statut=OK');
+		include_once('connexion.php');
+
+    // On redirige sur l'accueil'
+	//header('Location: ../../index.php');
+
 	}
 
 	else

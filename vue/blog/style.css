@@ -61,6 +61,22 @@ a
     text-align:center;
 }
 
+.nouveau_billet
+{
+    padding: 2px 24px 28px 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px grey;
+    text-align:center;
+}
+
+.nouveau_billet, .nouveau_billet table
+{
+    background-color: #CCCCCC;
+    margin: auto;
+    width: 800px;
+    border-radius: 5px;
+}
+
 .bouton
 {
     text-align: center;

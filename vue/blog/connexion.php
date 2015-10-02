@@ -6,7 +6,10 @@
     </head>
         
     <body>
-    <h1>Mon super blog - Espace membre</h1>
+<?php
+    include ('vue/blog/header.php');
+?>
+   <h2 id="titre">Mon super blog - Espace membre</h2>
 
     <div class="inscription">
 
@@ -25,7 +28,7 @@
         <form action="controleur/blog/connexion.php" method="POST">  
             <p><input id="pseudo" name="pseudo" type="text" size="23" maxlength="40" placeholder="Pseudonyme" required /></p>
             <p><input id="mdp" name="mdp" type="password" size="23" maxlength="40" placeholder="Mot de passe" required /></p>
-            <p><label for="cookie">Rester connecté </label><input name="cookie" id="cookie" type="checkbox"/></p>
+            <!--<p><label for="cookie">Rester connecté </label><input name="cookie" id="cookie" type="checkbox"/></p>-->
             <div class="bouton"><input type="submit" value="Se Connecter"/></div>
         </form>
     </div>

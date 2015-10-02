@@ -6,7 +6,10 @@
     </head>
         
     <body>
-    <h1>Mon super blog - Devenir Membre</h1>
+<?php
+    include ('vue/blog/header.php');
+?>
+    <h2 id="titre">Mon super blog - Devenir Membre</h2>
 
     <div class="inscription">
 

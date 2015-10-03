@@ -33,11 +33,11 @@
 
         	else
         	{  
-                // On charge le formulaire en lightbox
-                INCLUDE_ONCE ('/vue/blog/connexion_lightbox.php');
+                // On charge les formulaire en lightbox
+                INCLUDE_ONCE ('/vue/blog/connexion_inscription_lightbox.php');
 
         		{ ?>
-        		<a href="#" onclick="openbox('Connectez-vous', 0)">Connectez-vous</a> ou <a href="inscription.php">Inscrivez-vous</a>
+        		<a href="#" onclick="openbox_connexion('Connectez-vous', 0)">Connectez-vous</a> ou <a href="#" onclick="openbox_inscription('Inscrivez-vous', 0)">Inscrivez-vous</a>
         		<?php  	} 
         	}
         	?>

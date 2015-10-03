@@ -134,7 +134,7 @@ td
 
 /* LIGHTBOX */
 
-#shadowing
+#shadowing_connexion, #shadowing_inscription
 {
     display: none;
     position: fixed;
@@ -149,7 +149,7 @@ td
 }
 
 
-#box 
+#box_inscription, #box_connexion
 {
     display: none;
     position: fixed;
@@ -165,7 +165,7 @@ td
     overflow: auto;
 }
 
-#boxtitle
+#boxtitle_connexion, #boxtitle_inscription
 {
     position:absolute;
     float:center;

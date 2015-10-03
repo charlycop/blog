@@ -23,21 +23,41 @@ function fadein(id)
 }
 
 
-// Open the lightbox
+// Open the lightbox connexion
 
-
-function openbox(formtitle, fadin)
+function openbox_connexion(formtitle, fadin)
 {
-  var box = document.getElementById('box'); 
-  document.getElementById('shadowing').style.display='block';
+  var box = document.getElementById('box_connexion'); 
+  document.getElementById('shadowing_connexion').style.display='block';
 
-  var btitle = document.getElementById('boxtitle');
+  var btitle = document.getElementById('boxtitle_connexion');
   btitle.innerHTML = formtitle;
   
   if(fadin)
   {
-	 gradient("box", 0);
-	 fadein("box");
+	 gradient("box_connexion", 0);
+	 fadein("box_connexion");
+  }
+  else
+  { 	
+    box.style.display='block';
+  }  	
+}
+
+// Open the lightbox inscription
+
+function openbox_inscription(formtitle, fadin)
+{
+  var box = document.getElementById('box_inscription'); 
+  document.getElementById('shadowing_inscription').style.display='block';
+
+  var btitle = document.getElementById('boxtitle_inscription');
+  btitle.innerHTML = formtitle;
+  
+  if(fadin)
+  {
+	 gradient("box_inscription", 0);
+	 fadein("box_inscription");
   }
   else
   { 	
@@ -46,12 +66,20 @@ function openbox(formtitle, fadin)
 }
 
 
-// Close the lightbox
+// Close the lightbox inscription
 
-function closebox()
+function closebox_inscription()
 {
-   document.getElementById('box').style.display='none';
-   document.getElementById('shadowing').style.display='none';
+   document.getElementById('box_inscription').style.display='none';
+   document.getElementById('shadowing_inscription').style.display='none';
+}
+
+// Close the lightbox connexion
+
+function closebox_connexion()
+{
+   document.getElementById('box_connexion').style.display='none';
+   document.getElementById('shadowing_connexion').style.display='none';
 }
 
 

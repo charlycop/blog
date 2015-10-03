@@ -1,3 +1,6 @@
+<head>
+    <script src="js/lightbox-form.js" type="text/javascript"></script>
+</head>
 <div class="header_master">
     <div id="header">
         <div id="header_left">
@@ -29,9 +32,12 @@
         	}
 
         	else
-        	{
+        	{  
+                // On charge le formulaire en lightbox
+                INCLUDE_ONCE ('/vue/blog/connexion_lightbox.php');
+
         		{ ?>
-        		<a href="connexion.php">Connectez-vous</a> ou <a href="inscription.php">Inscrivez-vous</a>
+        		<a href="#" onclick="openbox('Connectez-vous', 0)">Connectez-vous</a> ou <a href="inscription.php">Inscrivez-vous</a>
         		<?php  	} 
         	}
         	?>

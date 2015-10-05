@@ -17,7 +17,7 @@
     ?>
 
 <!-- Formulaire de connexion -->
-        <h2 class="titre_inscription">Se connecter</h2>
+        <h2 class="titre_inscription">Connexion</h2>
         <form action="controleur/blog/connexion.php" method="POST">  
             <p><input id="pseudo" name="pseudo" type="text" size="23" maxlength="40" placeholder="Pseudonyme" required /></p>
             <p><input id="mdp" name="mdp" type="password" size="23" maxlength="40" placeholder="Mot de passe" required /></p>

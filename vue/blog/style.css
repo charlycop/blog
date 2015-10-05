@@ -47,18 +47,20 @@ a
 
 .inscription, .inscription table
 {
-    background-color: #CCCCCC;
+    
     margin: auto;
-    width: 208px;
-    border-radius: 5px;
+    width: 100%;
+    /* border-radius: 5px;
+    background-color: #CCCCCC; */
 }
 
-.inscription
+.inscription, .titre_inscription
 {
-    padding: 2px 24px 28px 24px;
-    border-radius: 5px;
-    box-shadow: 3px 3px 3px grey;
+    /*padding: 2px 24px 28px 24px;
+      /* border-radius: 5px; 
+   /* box-shadow: 3px 3px 3px grey; */
     text-align:center;
+    text-transform: uppercase;
 }
 
 .nouveau_billet
@@ -142,7 +144,7 @@ td
     left: 0%;
     width: 100%;
     height: 100%;
-    background-color: #CCA;
+    background-color: black;
     z-index:10;
     opacity:0.5;
     filter: alpha(opacity=50);
@@ -153,20 +155,23 @@ td
 {
     display: none;
     position: fixed;
-    top: 20%;
-    left: 20%;
-    width: 400px;
-    height: 200px;
-    padding: 48px;
+    top: 25%;
+    left: 42%;
+    width: 300px;
+    height: 400px;
+    padding: 0px;
     margin:0;
-    border: 1px solid black;
-    background-color: white;
+    border: 0px solid grey;
+    box-shadow: 0px 0px 3px 3px grey;
+    background-color: #CCCCCC;
+    /*border-radius: 5px;*/
     z-index:101;
     overflow: auto;
 }
 
 #boxtitle_connexion, #boxtitle_inscription
 {
+    display:none; 
     position:absolute;
     float:center;
     top:0;

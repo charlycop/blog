@@ -6,16 +6,6 @@
 
 <div class="inscription">
 
-<!-- Affichage d'un message -->
-    <?php
-        if (!isset($_GET['statut'])) 
-        {}
-        else
-        {
-            echo '<p class="sub_error">Le mot de passe et le pseudonyme ne correspondent pas, veuillez recommencer</p>';
-        }
-    ?>
-
 <!-- Formulaire de connexion -->
         <h2 class="titre_inscription">Connexion</h2>
         <form action="controleur/blog/connexion.php" method="POST">  

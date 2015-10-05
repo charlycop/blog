@@ -7,21 +7,15 @@
         
     <body>
 <?php
-   // include ('vue/blog/header.php');
+    include ('vue/blog/header.php');
 ?>
    <h2 id="titre">Mon super blog - Espace membre</h2>
 
     <div class="inscription">
 
 <!-- Affichage d'un message -->
-    <?php
-        if (!isset($_GET['statut'])) 
-        {}
-        else
-        {
-            echo '<p class="sub_error">Le mot de passe et le pseudonyme ne correspondent pas, veuillez recommencer</p>';
-        }
-    ?>
+<p class="sub_error">Le mot de passe et le pseudonyme ne correspondent pas, veuillez recommencer</p>
+
 
 <!-- Formulaire de connexion -->
         <h2 class="titre_inscription">Se connecter</h2>

@@ -13,7 +13,7 @@ $connexion = post_connexion($pseudo,$pass_hache);
 if (!$connexion)
 
 {
-	header('Location: ../../connexion.php?statut=NOK');
+	header('Location: ../../connexion.php');
 }
 
 else
@@ -22,7 +22,7 @@ else
 	session_start();
     $_SESSION['id'] = $connexion['id_membre'];
     $_SESSION['pseudo'] = htmlspecialchars($_POST['pseudo']);
-
+    
     // On redirige sur l'accueil'
 	header('Location: ../../index.php');
 }

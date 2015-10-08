@@ -9,7 +9,7 @@ $billets = get_billets(0, 100);
 foreach($billets as $cle => $billet)
 {
     $billets[$cle]['titre'] = htmlspecialchars($billet['titre']);
-    $billets[$cle]['contenu'] = nl2br(htmlspecialchars($billet['contenu']));
+    $billets[$cle]['contenu'] = $billet['contenu'];
 }
 
 // On affiche la page (vue)

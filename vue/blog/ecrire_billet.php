@@ -3,7 +3,7 @@
         <title>Mon blog - Nouveau Billet</title>
         <meta charset="utf-8" />
          <link rel="stylesheet" href="vue/blog/style.css" />
-         <script src="//tinymce.cachefly.net/4.2/tinymce.min.js"></script>
+         <script src="ckeditor/ckeditor.js"></script>
         <script>tinymce.init({selector:'textarea'});</script> 
     </head>
         
@@ -20,6 +20,11 @@
         <form action="controleur/blog/ecrire_billet.php" method="POST">  
             <p><input id="titre_billet" name="titre_billet" type="text" size="100" maxlength="100" placeholder="Titre du billet" required /></p>
             <p><textarea id="contenu_billet" name="contenu_billet" placeholder="Ecrivez votre billet ici" cols="101" rows="10"></textarea></p>
+             <script>
+                // Replace the <textarea id="contenu_billet"> with a CKEditor
+                // instance, using default configuration.
+                CKEDITOR.replace( 'contenu_billet' );
+            </script>
             <div class="bouton"><input type="submit" value="Publier le billet"/></div>
         </form>
     </div>

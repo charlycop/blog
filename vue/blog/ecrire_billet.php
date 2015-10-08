@@ -4,7 +4,6 @@
         <meta charset="utf-8" />
          <link rel="stylesheet" href="vue/blog/style.css" />
          <script src="vue/blog/ckeditor/ckeditor.js"></script>
-        <script>tinymce.init({selector:'textarea'});</script> 
     </head>
         
     <body>

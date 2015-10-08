@@ -3,7 +3,7 @@
         <title>Mon blog - Nouveau Billet</title>
         <meta charset="utf-8" />
          <link rel="stylesheet" href="vue/blog/style.css" />
-         <script src="ckeditor/ckeditor.js"></script>
+         <script src="vue/blog/ckeditor/ckeditor.js"></script>
         <script>tinymce.init({selector:'textarea'});</script> 
     </head>
         

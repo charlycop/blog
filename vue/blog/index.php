@@ -20,17 +20,19 @@ foreach($billets as $billet)
 {
 ?>
 <div class="news">
-    <p id="normal">Derniers billets du blog :</p>
-    <h3>
-        <?php echo $billet['titre']; ?>
-        <em> - <span>le <?php echo $billet['date_creation_fr']; ?> de 
-        <?php 
-            // j'appelle la fonction pour afficher le pseudo
-            $pseudo_membre = get_pseudo($billet['id_membre']);
-            echo $pseudo_membre['pseudo'];
-        ?>
-    </span></em>
-    </h3>
+
+        <div class="billet_titre">
+        <h3>
+            <?php echo $billet['titre']; ?>
+            <em> - <span>le <?php echo $billet['date_creation_fr']; ?> de 
+            <?php 
+                // j'appelle la fonction pour afficher le pseudo
+                $pseudo_membre = get_pseudo($billet['id_membre']);
+                echo $pseudo_membre['pseudo'];
+            ?>
+        </span></em>
+        </h3>
+    </div>
     
     <p>
     <?php echo $billet['contenu']; ?>

@@ -8,7 +8,7 @@ $billets = get_billets($_GET['billet'], 0, 1);
 foreach($billets as $cle => $billet)
 {
     $billets[$cle]['titre'] = htmlspecialchars($billet['titre']);
-    $billets[$cle]['contenu'] = nl2br(htmlspecialchars($billet['contenu']));
+    $billets[$cle]['contenu'] = $billet['contenu'];
 }
 
 // On compte le nombre de commentaires
@@ -24,7 +24,7 @@ $commentaires = get_commentaires(0, 100);
 foreach($commentaires as $cle => $commentaire)
 {
     $commentaires[$cle]['id_membre'] = htmlspecialchars($commentaire['id_membre']);
-    $commentaires[$cle]['commentaire'] = nl2br(htmlspecialchars($commentaire['commentaire']));
+    $commentaires[$cle]['commentaire'] = $commentaire['commentaire'];
 }
 
 

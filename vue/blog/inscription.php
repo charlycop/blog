@@ -7,7 +7,7 @@
         
     <body>
 <?php
-    include ('vue/blog/header.php');
+    include ('header.php');
 ?>
     <h2 id="titre">Mon super blog - Devenir Membre</h2>
 

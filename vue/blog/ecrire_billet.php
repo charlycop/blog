@@ -8,7 +8,7 @@
         
     <body>
 <?php
-    include ('vue/blog/header.php');
+    include ('header.php');
 ?>
         
 <h1 id="titre">Mon super blog ! - Rédiger un billet</h1>

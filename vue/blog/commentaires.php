@@ -11,7 +11,7 @@
 ?>
 
 <?php 
-    include ('vue/blog/header.php');
+    include ('header.php');
 
     $billet_id = (int) $_GET['billet'] 
 ?>       

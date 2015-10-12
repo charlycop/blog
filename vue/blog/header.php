@@ -4,13 +4,13 @@
 <div class="header_master">
     <div id="header">
         <div id="header_left">
-            <a href="http://localhost/cours_php/blog/index.php">Voir les billets</a> 
+            <a href="index.php">Voir les billets</a> 
 
             <?php
             if (isset($_SESSION['id']))
             {
                 { ?>
-                 - <a href="http://localhost/cours_php/blog/ecrire_billet.php">Ecrire un billet</a>
+                 - <a href="ecrire_billet.php">Ecrire un billet</a>
                 <?php   } 
             }
 
@@ -34,7 +34,7 @@
         	else
         	{  
                 // On charge les formulaire en lightbox
-                INCLUDE_ONCE ('/vue/blog/connexion_inscription_lightbox.php');
+                INCLUDE_ONCE ('vue/blog/connexion_inscription_lightbox.php');
 
         		{ ?>
         		<a href="#" onclick="openbox_connexion('Connectez-vous', 0)">Connectez-vous</a> ou <a href="#" onclick="openbox_inscription('Inscrivez-vous', 0)">Inscrivez-vous</a>

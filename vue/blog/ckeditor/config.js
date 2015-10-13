@@ -11,8 +11,13 @@ CKEDITOR.editorConfig = function( config ) {
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
 	//Image Uploader plugin
-	config.extraPlugins = 'imageuploader';
 	config.extraPlugins = 'smiley';
+	config.extraPlugins = 'widget';
+	config.extraPlugins = 'dialog';
+	config.extraPlugins = 'lineutils';
+	config.extraPlugins = 'clipboard';
+	config.extraPlugins = 'dialogui';
+	config.extraPlugins = 'codesnippet';
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [

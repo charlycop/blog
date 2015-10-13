@@ -44,12 +44,11 @@
 		    <?php echo $billet['contenu']; ?>
 		    
 		    <?php
-		    // Je charge et j'appelle la fonction pour compter les commentaires
 		    $nb_commentaires = compte_commentaires($billet['id']);
 		    ?>
 
 		    <br />
-		    <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>(<?php echo $nb_commentaires['nb_commentaires']; ?>) - Modifier - <a href="controleur/blog/delete_billet.php?billet=<?php echo $billet['id']; ?>">Supprimer</a>
+		    <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>(<?php echo $nb_commentaires['nb_commentaires']; ?>) - <a href="modifier_billet.php?billet=<?php echo $billet['id']; ?>">Modifier</a> - <a href="controleur/blog/delete_billet.php?billet=<?php echo $billet['id']; ?>">Supprimer</a>
 		    </p>
 		</div>
 		<?php

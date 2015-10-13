@@ -9,13 +9,9 @@
     </head>
         
     <body>
-<?php
-    
-?>
 
 <?php 
     include ('header.php');
-
     $billet_id = (int) $_GET['billet'] 
 ?>       
 

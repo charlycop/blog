@@ -10,14 +10,13 @@ CKEDITOR.editorConfig = function( config ) {
 	// For complete reference see:
 	// http://docs.ckeditor.com/#!/api/CKEDITOR.config
 
-	//Image Uploader plugin
-	config.extraPlugins = 'smiley';
-	config.extraPlugins = 'widget';
-	config.extraPlugins = 'dialog';
-	config.extraPlugins = 'lineutils';
-	config.extraPlugins = 'clipboard';
-	config.extraPlugins = 'dialogui';
+	//config.extraPlugins = 'dialog';
+	//config.extraPlugins = 'widget';
 	config.extraPlugins = 'codesnippet';
+	//config.extraPlugins = 'smiley';
+	//config.extraPlugins = 'lineutils';
+	//config.extraPlugins = 'clipboard';
+	//config.extraPlugins = 'dialogui';
 	//config.extraPlugins = 'popup';
 	//config.extraPlugins = 'filebrowser';
 	//config.extraPlugins = 'imgupload';

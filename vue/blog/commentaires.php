@@ -3,6 +3,9 @@
         <title>Mon blog</title>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="vue/blog/style.css" />
+        <link rel="stylesheet" href="vue/blog/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css">
+        <script src="vue/blog/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
     </head>
         
     <body>

@@ -18,6 +18,17 @@ CKEDITOR.editorConfig = function( config ) {
 	config.extraPlugins = 'clipboard';
 	config.extraPlugins = 'dialogui';
 	config.extraPlugins = 'codesnippet';
+	//config.extraPlugins = 'popup';
+	//config.extraPlugins = 'filebrowser';
+	//config.extraPlugins = 'imgupload';
+	//config.extraPlugins = 'uploadimage';
+	//config.extraPlugins = 'imageuploader';
+	//config.extraPlugins = 'uploadwidget';
+	//config.extraPlugins = 'filetools';
+	//config.extraPlugins = 'notificationaggregator';
+	//config.extraPlugins = 'notification';
+	//config.extraPlugins = 'toolbar';
+	//config.extraPlugins = 'button';
 
 	// The toolbar groups arrangement, optimized for two toolbar rows.
 	config.toolbarGroups = [

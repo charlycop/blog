@@ -10,7 +10,7 @@
             if (isset($_SESSION['id']))
             {
                 { ?>
-                 - <a href="ecrire_billet.php">Ecrire un billet</a>
+                 - <a href="ecrire_billet.php">Ecrire un billet</a> - <a href="onlinechat.php">Chat en direct</a>
                 <?php   } 
             }
 

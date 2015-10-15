@@ -5,7 +5,7 @@ include_once('modele/blog/connexion_sql.php');
 
 if (!isset($_GET['billet']))
 {
-    include_once('controleur/blog/index.php');
+    	include_once('controleur/blog/index.php');
 }
 
 else

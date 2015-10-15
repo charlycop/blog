@@ -1,6 +1,6 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  #RewriteBase /path/to/phpfreechat/server
+  #RewriteBase /localhost/www/cours_php/blog/phpfreechat/server
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^(.*)$ index.php [QSA,L]

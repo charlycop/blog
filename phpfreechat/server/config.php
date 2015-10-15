@@ -14,17 +14,17 @@ $GLOBALS['pfc_timeout'] = 35;
 $GLOBALS['first_is_op'] = true;
 
 // custom user hooks
-$GLOBALS['pfc_hooks'] = array();
+//$GLOBALS['pfc_hooks'] = array();
 
 // HOOK - pfc.before.auth
 // Can be used to automaticaly login to the chat 
 // with your own auth system (forum, ldap, database, sso ...)
 // example:
-// $GLOBALS['pfc_hooks']['pfc.before.auth'][5] = function ($app, $req, $res) {
-//   return function () use ($app, $req, $res) {
-//     return 'kerphi'; // TODO: replace this code with a real example
-//   };
-// };
+$GLOBALS['pfc_hooks']['pfc.before.auth'][5] = function ($app, $req, $res) {
+ return function () use ($app, $req, $res) {
+ return $_SESSION['pseudo']; // TODO: replace this code with a real example
+  };
+};
 
 // HOOK - pfc.filter.login
 // Can be used to filter forbidden characters from the login string

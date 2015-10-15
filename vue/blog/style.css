@@ -26,10 +26,11 @@ h3 span
     font-weight: normal;
 }
 
-/*.billet_titre
+#mychat
 {
-    width: 100%;
-}*/
+    width: 70%;
+    margin: auto;
+}
 
 .news p, .news pre
 {

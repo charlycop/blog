@@ -1,4 +1,0 @@
-AuthName "Page d'administration protégée"
-AuthType Basic
-AuthUserFile "F:\wamp\www\cours_php\blog\admin\.htpasswd"
-Require valid-user

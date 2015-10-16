@@ -5,6 +5,17 @@
     <div id="header">
         <div id="header_left">
             <a href="index.php">Voir les billets</a> 
+            <?php
+                // On récupère l'avatar
+                if (isset($_SESSION['avatar']))
+                {
+                    $avatarheader = 'vue/blog/img/avatars/'.$_SESSION['id'].'_30x30'.$_SESSION['avatar'].'';
+                }
+
+                else
+                {
+                    $avatarheader = 'vue/blog/img/avatars/avatar_30x30.png';
+                } ?>
 
             <?php
             if (isset($_SESSION['id']))
@@ -27,7 +38,7 @@
         	if (isset($_SESSION['id']))
         	{
         		{ ?>
-        		<a href="membre.php">Espace membre</a> - Bienvenue <?php echo $_SESSION['pseudo']; ?> - <a href="deconnexion.php">Se déconnecter</a>
+        		<div id="avatartop"><img class="avatar30" src="<?php echo $avatarheader; ?>" /></div><a href="membre.php">Espace membre</a> - Bienvenue <?php echo $_SESSION['pseudo']; ?> - <a href="deconnexion.php">Se déconnecter</a>
         		<?php  	} 
         	}
 

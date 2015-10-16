@@ -16,12 +16,26 @@
 
 		<div class="news">
 			<h3>Vos informations</h3>
-			<p>
-				Pseudonyme : <?php echo $_SESSION['pseudo'] ?><br/>
-				Email	   : <?php echo $all_infos_membre['email'] ?><br/>
-				mot de passe : <?php echo $all_infos_membre['pass'] ?><br/>
-				Date d'inscription : <?php echo $all_infos_membre['date_inscription_fr'] ?>
-			</p>
+			
+			<div class="divmembre">
+				<p class="membre">
+						<img class="avatar150" src="<?php echo $avatarmembre; ?>" />
+					</p>
+									<p class="membre">
+					Pseudonyme : <?php echo $_SESSION['pseudo'] ?><br/>
+					Email	   : <?php echo $all_infos_membre['email'] ?><br/>
+					Date d'inscription : <?php echo $all_infos_membre['date_inscription_fr'] ?>
+				</p>
+						<p>Modifier votre avatar</p><form class="membre" enctype="multipart/form-data" action="controleur/blog/upload_avatar.php" method="post">
+						<!-- MAX_FILE_SIZE doit précéder le champs input de type file -->
+						<input type="hidden" name="MAX_FILE_SIZE" value="5000000" />
+						<!-- Le nom de l'élément input détermine le nom dans le tableau $_FILES -->  
+						<input name="userfile" type="file" required /><br/>
+						<input type="submit" value="Envoyer" />
+						</form>
+
+			</div>
+
 		</div>
 
 		<h2 id="titre">Mes billets</h2>

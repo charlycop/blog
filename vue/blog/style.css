@@ -32,14 +32,15 @@ h3 span
     margin: auto;
 }
 
-.news p, .news pre
+.news p, .news pre, .news .divmembre
 {
     background-color: white;
     margin-top:0px;
     color: black;
     padding-left: 15px;
     padding-right: 15px;
-
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 .news, #header
 {
@@ -52,6 +53,22 @@ h3 span
 {
     background-color: white;
     box-shadow: 0px 0px 10px 3px grey;
+}
+
+.membre
+{
+    display: inline-block;
+}
+
+.avatar30
+{
+    border-radius: 15px;
+}
+
+.avatar150
+{
+    box-shadow: 0px 0px 10px 3px grey;
+        display: inline-block;
 }
 
 a
@@ -139,13 +156,19 @@ td
     padding-top: 30px;
 }
 
-#header_left, #header_right
+#header_left, #header_right, #avatartop
 {
     display: inline-block;
     position: relative;
 }
 
-#header_right
+#avatartop
+{
+    margin-top: -4px;
+    margin-left: 5px;
+}
+
+#header_right, #avatartop
 {
     float: right;
 }

@@ -33,6 +33,7 @@ foreach($billets as $billet)
                 // j'appelle la fonction pour afficher le pseudo
                 $pseudo_membre = get_pseudo($billet['id_membre']);
                 echo $pseudo_membre['pseudo'];
+
             ?>
         </span></em>
         </h3>
@@ -86,6 +87,9 @@ foreach($commentaires as $commentaire)
         <form action="controleur/blog/ecrire_commentaire.php" method="POST">  
             <p><textarea id="contenu_commentaire" name="contenu_commentaire" required placeholder="Connectez-vous puis écrivez votre commentaire ici" cols="101" rows="10"></textarea></p>
             <input type="hidden" id="id_billet" name="id_billet" value="<?php echo $billet_id; ?>" />
+           <!-- <input type="hidden" id="email_auteur_billet" name="email_auteur_billet" value="<?php echo $billet['email']; ?>" />    -->
+            <input type="hidden" id="titre_billet" name="titre_billet" value="<?php echo $billet['titre']; ?>" />
+            <input type="hidden" id="id_auteur" name="id_auteur" value="<?php echo $billet['id_membre']; ?>" />
             <div class="bouton"><input type="submit" value="Publier le commentaire"/></div>
         </form>
     </div>

@@ -1,7 +1,3 @@
-<head> 
-<meta charset="utf-8" />
-</head>
-        
 <?php
 session_start(); // On démarre la session AVANT toute chose
 
@@ -20,9 +16,11 @@ $email_membre = get_email($_POST['id_auteur']);
 // On envoie un email à l'auteur du billet
 $to = $email_membre['email'];
 $subject = 'Nouveau commentaire sur votre billet';
-$msg = 'Un nouveau commentaire vient d\'être posté sur votre billet intitulé "'.$_POST['titre_billet'].'".';
+$msg = '<p>Un nouveau commentaire vient d\'être posté sur votre billet intitulé "'.$_POST['titre_billet'].'".</p>
+		<p>Voir ce commentaire : <a href="http://charly.esy.es/blog/commentaires.php?billet='.$_POST['id_billet'].'">http://charly.esy.es/blog/commentaires.php?billet='.$_POST['id_billet'].'</a></p>';
 $headers = 'From: Super Blog <charlycop@free.fr>'."\r\n";
 $headers .= 'Bcc: Moi <charlycop@free.fr>'."\r\n";
+$headers .= 'Content-type: text/html; charset=utf-8'."\r\n";
 $headers .= "\r\n";
 mail($to, $subject, $msg, $headers);
 

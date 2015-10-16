@@ -156,13 +156,13 @@ td
     padding-top: 30px;
 }
 
-#header_left, #header_right, #avatartop
+#header_left, #header_right, .avatartop
 {
     display: inline-block;
     position: relative;
 }
 
-#avatartop
+.avatar30
 {
     margin-top: -4px;
     margin-left: 5px;

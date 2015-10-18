@@ -65,7 +65,7 @@
 	        <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>(<?php 
 	        //On compte le nombre de commentaire
 	        $nb_commentaires = compte_commentaires($billet['id']);
-	        echo $nb_commentaires['nb_commentaires']; ?>)
+	        echo $nb_commentaires['nb_commentaires']; ?>) - <a href="modifier_billet.php?billet=<?php echo $billet['id']; ?>">Modifier</a> - <a href="controleur/blog/delete_billet.php?billet=<?php echo $billet['id']; ?>">Supprimer</a>
    	</div>
 </div>
 		<?php

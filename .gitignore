@@ -1,3 +1,6 @@
 modele/blog/connexion_sql.php
 modele/blog/connexion_sql.hostinger
 phpfreechat/server/data/*.*
+vue/blog/img/avatars/*.jpg
+vue/blog/img/avatars/*.png
+vue/blog/img/avatars/*.gif

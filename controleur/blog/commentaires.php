@@ -23,11 +23,9 @@ $commentaires = get_commentaires(0, 100);
 // Ici, on doit surtout sécuriser l'affichage
 foreach($commentaires as $cle => $commentaire)
 {
-    $commentaires[$cle]['id_membre'] = htmlspecialchars($commentaire['id_membre']);
-    $commentaires[$cle]['commentaire'] = $commentaire['commentaire'];
+    $commentaires[$cle]['pseudo_commentateur'] = htmlspecialchars($commentaire['pseudo_commentateur']);
+    $commentaires[$cle]['commentaire'] = nl2br(htmlspecialchars($commentaire['commentaire']));
 }
-
-
 
 // On affiche la page (vue)
 include_once('vue/blog/commentaires.php');

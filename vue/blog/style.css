@@ -133,12 +133,13 @@ a
     border-radius: 5px;
     box-shadow: 3px 3px 3px grey;
     text-align:center;
+    margin: auto;  
 }
 
 .nouveau_billet, .nouveau_billet table
 {
     background-color: #CCCCCC;
-    margin: auto;
+    margin-top: 30px;
     width: 800px;
     border-radius: 5px;
 }

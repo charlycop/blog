@@ -24,25 +24,6 @@ include ('modele/blog/get_pseudo.php');
 foreach($billets as $billet)
 {
 ?>
-<!-- <div class="news">
-    <div class="billet_titre">
-        <h3>
-            <?php echo $billet['titre']; ?>
-            <em> - <span>le <?php echo $billet['date_billet']; ?> de 
-            <?php 
-                echo $billet['pseudo_billet'];
-            ?>
-        </span></em>
-        </h3>
-    </div>
-    
-    <p>
-    <?php echo $billet['contenu_billet']; ?>
-    <br />
-    </p>
-
-</div> -->
-
 <div class="news">
     <div class="billet_titre">
         <h3>
@@ -89,23 +70,34 @@ foreach($commentaires as $commentaire)
 ?>
 
 <div class="news">
-    <h3>
-        <?php 
-            // j'appelle la fonction pour afficher le pseudo
-            $pseudo_membre = get_pseudo($commentaire['id_membre']);
-            echo $pseudo_membre['pseudo'];
-        ?>
-           
-        <em>- <span>le <?php echo $commentaire['date_commentaire_fr']; ?></span></em>
-    </h3>
-    
-    <p>
-    <?php echo $commentaire['commentaire']; ?>
-    <br />
-    </p>
+    <div class="billet_titre">
+        <h3>
+           <em><span>le <?php echo $billet['date_billet']; ?></span></em>
+        </h3>
+    </div>
 
+    <div class="billet">
+        <div class="billet_auteur">
+            <p><?php echo $commentaire['pseudo_commentateur']; ?><br/>
+            <?php
+            if (isset($commentaire['avatar_commentateur']))
+            {
+                $avatarcommentaire = 'vue/blog/img/avatars/'.$commentaire['id_commentateur'].'_85x85'.$commentaire['avatar_commentateur'].'';
+            }
+
+            else
+            {
+                $avatarcommentaire = 'vue/blog/img/avatars/avatar_85x85.png';
+            }
+            ?> 
+            
+            <img src="<?php echo $avatarcommentaire; ?>" title="<?php echo ''.$commentaire['pseudo_commentateur'].''; ?>" /> </p>
+        </div>
+        <div class="billet_contenu">
+           <p> <?php echo $commentaire['commentaire']; ?></p>
+        </div>
+    </div>
 </div>
-
 <?php
 }
 ?>

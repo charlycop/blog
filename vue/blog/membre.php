@@ -44,27 +44,30 @@
 		foreach($billets as $billet)
 		{
 		?>
-		<div class="news">
+<div class="news">
+    <div class="billet_titre">
+        <h3>
+            <?php echo $billet['titre']; ?>
+            <em> - <span>le <?php echo $billet['date_billet']; ?></span></em>
+        </h3>
+    </div>
 
-		        <div class="billet_titre">
-		        <h3>
-		            <?php echo $billet['titre']; ?>
-		            <em> - <span>le <?php echo $billet['date_creation_fr']; ?>
-		        </span></em>
-		        </h3>
-		    </div>
-		    
-		    <p>
-		    <?php echo $billet['contenu']; ?>
-		    
-		    <?php
-		    $nb_commentaires = compte_commentaires($billet['id']);
-		    ?>
-
-		    <br />
-		    <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>(<?php echo $nb_commentaires['nb_commentaires']; ?>) - <a href="modifier_billet.php?billet=<?php echo $billet['id']; ?>">Modifier</a> - <a href="controleur/blog/delete_billet.php?billet=<?php echo $billet['id']; ?>">Supprimer</a>
-		    </p>
-		</div>
+    <div class="billet">
+        <div class="billet_auteur">
+            <p><?php echo $_SESSION['pseudo']; ?><br/>
+            <img src="<?php echo $avatarbillet; ?>" title="<?php echo ''.$_SESSION['pseudo'].''; ?>" /> </p>
+        </div>
+        <div class="billet_contenu">
+            <?php echo $billet['contenu_billet']; ?>
+        </div>
+            
+	        <br />
+	        <a href="commentaires.php?billet=<?php echo $billet['id']; ?>">Commentaires</a>(<?php 
+	        //On compte le nombre de commentaire
+	        $nb_commentaires = compte_commentaires($billet['id']);
+	        echo $nb_commentaires['nb_commentaires']; ?>)
+   	</div>
+</div>
 		<?php
 		}
 		?>

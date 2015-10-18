@@ -13,19 +13,22 @@ $billets = get_billets_membre($_SESSION['id'], 0, 1000);
 foreach($billets as $cle => $billet)
 {
     $billets[$cle]['titre'] = htmlspecialchars($billet['titre']);
-    $billets[$cle]['contenu'] = $billet['contenu'];
+    $billets[$cle]['contenu_billet'] = $billet['contenu_billet'];
 }
 
-// On récupère l'avatar
+// On récupère l'avatar grand format
 if (isset($_SESSION['avatar']))
 {
 	$avatarmembre = 'vue/blog/img/avatars/'.$_SESSION['id'].'_150x150'.$_SESSION['avatar'].'';
+	$avatarbillet = 'vue/blog/img/avatars/'.$_SESSION['id'].'_85x85'.$_SESSION['avatar'].'';
 }
 
 else
 {
 	$avatarmembre = 'vue/blog/img/avatars/avatar_150x150.png';
+	$avatarbillet = 'vue/blog/img/avatars/avatar_85x85.png';
 }
+
 
 // On Insère des fonctions
 include_once ('modele/blog/compte_commentaires.php');

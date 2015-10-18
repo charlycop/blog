@@ -19,7 +19,7 @@
         <h2 class="titre_inscription">Modification d'un billet</h2>
         <form action="controleur/blog/post_modifier_billet.php" method="POST">  
             <p><input id="titre_billet" name="titre_billet" type="text" size="100" maxlength="100"  required value="<?php echo $billet['titre']; ?>"/></p>
-            <p><textarea id="contenu_billet" name="contenu_billet" cols="101" rows="10"><?php echo $billet['contenu']; ?></textarea></p>
+            <p><textarea id="contenu_billet" name="contenu_billet" cols="101" rows="10"><?php echo $billet['contenu_billet']; ?></textarea></p>
              <script>
                 // Replace the <textarea id="contenu_billet"> with a CKEditor
                 // instance, using default configuration.

@@ -8,7 +8,7 @@ $billets = get_billets($_GET['billet'], 0, 1);
 foreach($billets as $cle => $billet)
 {
     $billets[$cle]['titre'] = htmlspecialchars($billet['titre']);
-    $billets[$cle]['contenu'] = $billet['contenu'];
+    $billets[$cle]['contenu_billet'] = $billet['contenu_billet'];
 }
 
 // On compte le nombre de commentaires

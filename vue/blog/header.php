@@ -6,7 +6,7 @@
         <div id="header_left">
             <a href="index.php">Voir les billets</a> 
             <?php
-                // On récupère l'avatar
+                // On récupère les avatars
                 if (isset($_SESSION['avatar']))
                 {
                     $avatarheader = 'vue/blog/img/avatars/'.$_SESSION['id'].'_30x30'.$_SESSION['avatar'].'';

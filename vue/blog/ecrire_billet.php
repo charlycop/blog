@@ -23,7 +23,6 @@
                 // Replace the <textarea id="contenu_billet"> with a CKEditor
                 // instance, using default configuration.
                 CKEDITOR.replace( 'contenu_billet');
-
             </script>
             <div class="bouton"><input type="submit" value="Publier le billet"/></div>
         </form>

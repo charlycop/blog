@@ -72,7 +72,7 @@ foreach($commentaires as $commentaire)
 <div class="news">
     <div class="billet_titre">
         <h3>
-           <em><span>le <?php echo $billet['date_billet']; ?></span></em>
+           <em><span>le <?php echo $commentaire['date_commentaire_fr']; ?></span></em>
         </h3>
     </div>
 
